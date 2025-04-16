@@ -59,14 +59,15 @@ const Toast = Swal.mixin({
       });
 }
 
+// inserccion de fetch y API
 
 document.getElementById("lista").addEventListener("click", () => {
     
-    fetch("https://jsonplaceholder.typicode.com/users") // ejemplo de API
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then(response => response.json())
       .then(data => {
         const lista = document.getElementById("listaUsuarios");
-        lista.innerHTML = ""; // Limpiar lista si ya existe algo
+        lista.innerHTML = "";
   
         data.forEach(usuario => {
           const li = document.createElement("li");
