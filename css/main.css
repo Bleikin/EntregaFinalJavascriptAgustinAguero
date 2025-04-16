@@ -15,6 +15,14 @@ body{
 
 }
 
+body button {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
 h1 {
     font-size: 50px;
     margin-bottom: 40px;
@@ -30,6 +38,7 @@ p{
     color:black ;
 
 }
+
 
 .choices {
     display: flex;
@@ -60,3 +69,4 @@ p{
     background-color: antiquewhite;
     cursor: not-allowed;
 }
+

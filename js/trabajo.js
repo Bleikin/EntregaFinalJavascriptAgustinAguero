@@ -59,3 +59,19 @@ const Toast = Swal.mixin({
       });
 }
 
+
+document.getElementById("lista").addEventListener("click", () => {
+    
+    fetch("https://jsonplaceholder.typicode.com/users") // ejemplo de API
+      .then(response => response.json())
+      .then(data => {
+        const lista = document.getElementById("listaUsuarios");
+        lista.innerHTML = ""; // Limpiar lista si ya existe algo
+  
+        data.forEach(usuario => {
+          const li = document.createElement("li");
+          li.textContent = usuario.name;
+          lista.appendChild(li);
+        });
+      })
+  });
